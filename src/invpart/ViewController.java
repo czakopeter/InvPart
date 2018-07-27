@@ -16,6 +16,7 @@ public class ViewController implements Initializable {
     TreeItem<String> root = new TreeItem<>();
     
     TreeItem<String> settings = new TreeItem<>(Constants.MENU_SETTINGS);
+    
     TreeItem<String> reports = new TreeItem<>(Constants.MENU_REPORT);
     TreeItem<String> exit = new TreeItem<>(Constants.MENU_EXIT);
     
