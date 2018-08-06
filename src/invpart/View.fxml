@@ -18,10 +18,14 @@
                <children>
                   <Pane id="licensePlateListPane" fx:id="licensePlateListPane" layoutX="136.0" layoutY="86.0" prefHeight="598.0" prefWidth="487.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
+                        <CheckBox id="usedLicencePlateCheckBox" fx:id="usedLicencePlateCheckBox" layoutX="37.0" layoutY="491.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" selected="true" text="használatban" />
                         <TableView id="licensePlateListTableView" fx:id="licensePlateListTableView" layoutX="-4.0" prefHeight="422.0" prefWidth="493.0">
                           <columns>
                           </columns>
                         </TableView>
+                        <Label layoutX="37.0" layoutY="443.0" text="Rendszám:" />
+                        <DatePicker id="licencePlateDatePicker" fx:id="licencePlateDatePicker" editable="false" layoutX="39.0" layoutY="527.0" promptText="érvényesség kezdete" />
+                        <TextField id="licensePlateTextField" fx:id="licensePlateTextField" layoutX="102.0" layoutY="439.0" promptText="ABC123" />
                      </children></Pane>
                </children></AnchorPane>
         </items>
