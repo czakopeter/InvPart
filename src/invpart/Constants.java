@@ -7,5 +7,5 @@ public class Constants {
   public static String MENU_SETTINGS = "Adatbevitel/Beállítások";
   public static String MENU_LICENSE_PLATE = "Rendszam";
   public static String MENU_REPORT = "Jelentés";
-  public static String MENU_EXIT = "Kilépés";
+  public final static String MENU_EXIT = "Kilépés";
 }

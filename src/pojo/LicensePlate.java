@@ -12,7 +12,7 @@ public class LicensePlate {
   public LicensePlate(String id, String licensePlate, boolean used, String validityDate) {
     this.id = new SimpleStringProperty(id);
     this.licensePlate = new SimpleStringProperty(licensePlate);
-    this.used.set(used);
-    this.validityDate.set(validityDate);
+    this.used = new SimpleBooleanProperty(used);
+    this.validityDate = new SimpleStringProperty(validityDate);
   }
 }

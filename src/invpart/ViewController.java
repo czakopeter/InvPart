@@ -2,6 +2,8 @@ package invpart;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -42,6 +44,24 @@ public class ViewController implements Initializable {
     TreeView<String> treeView = new TreeView<>(root);
     treeView.setShowRoot(false);
     menuPane.getChildren().addAll(treeView);
+    
+    treeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
+      @Override
+      public void changed(ObservableValue observable, Object oldValue, Object newValue) {
+        TreeItem<String> selectedItem = (TreeItem<String>) newValue;
+        String selectedMenu;
+        selectedMenu = selectedItem.getValue();
+        
+        if(null != selectedMenu) {
+          switch (selectedMenu) {
+            
+            case Constants.MENU_EXIT:
+              System.exit(0);
+              break;
+          }
+        }
+      }
+    });
   }
   
   private void setLicensePlateTableList() {
