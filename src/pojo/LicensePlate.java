@@ -15,4 +15,5 @@ public class LicensePlate {
     this.used = new SimpleBooleanProperty(used);
     this.validityDate = new SimpleStringProperty(validityDate);
   }
+  
 }
