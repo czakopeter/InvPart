@@ -9,8 +9,8 @@ public class LicensePlate {
   private SimpleBooleanProperty used;
   private SimpleStringProperty validityDate;
 
-  public LicensePlate(String id, String licensePlate, boolean used, String validityDate) {
-    this.id = new SimpleStringProperty(id);
+  public LicensePlate(Integer id, String licensePlate, boolean used, String validityDate) {
+    this.id = new SimpleStringProperty(String.valueOf(id));
     this.licensePlate = new SimpleStringProperty(licensePlate);
     this.used = new SimpleBooleanProperty(used);
     this.validityDate = new SimpleStringProperty(validityDate);
