@@ -15,5 +15,31 @@ public class LicensePlate {
     this.used = new SimpleBooleanProperty(used);
     this.validityDate = new SimpleStringProperty(validityDate);
   }
+
+  public boolean getUsed() {
+    return used.get();
+  }
+
+  public void setUsed(boolean used) {
+    this.used.set(used);
+  }
+
+  public String getValidityDate() {
+    return validityDate.get();
+  }
+
+  public void setValidityDate(String validityDate) {
+    this.validityDate.set(validityDate);
+  }
+
+  public String getId() {
+    return id.get();
+  }
+
+  public String getLicensePlate() {
+    return licensePlate.get();
+  }
+  
+  
   
 }

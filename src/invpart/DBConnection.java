@@ -3,10 +3,13 @@ package invpart;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pojo.LicensePlate;
 
 public class DBConnection {
@@ -75,5 +78,19 @@ public class DBConnection {
       System.err.println("Can't get result");
     }
     return allLicensePlate;
+  }
+  
+  public void addLicensePlate(LicensePlate plate) {
+    try {
+      String sql = "insert into licesePlate(licensePlate,used,validityDate) values (?,?,?)";
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setString(1, plate.getLicensePlate());
+      ps.setBoolean(2, plate.getUsed());
+      ps.setString(3, plate.getValidityDate());
+      ps.execute();
+    } catch (SQLException ex) {
+      System.err.println("Add license plate failed");;
+    }
+    
   }
 }
